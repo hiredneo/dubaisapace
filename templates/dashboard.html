@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DubaiSpace - Dashboard</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>User Dashboard</h1>
+    <nav aria-label="Main Navigation">
+      <a class="nav-link" href="/">Home</a>
+    </nav>
+  </header>
+  <main>
+    <section class="card" aria-labelledby="upcoming-trips-heading">
+      <h2 id="upcoming-trips-heading">Upcoming Trips</h2>
+      <ul>
+        {% for trip in upcoming_trips %}
+        <li>
+          <strong>Flight {{ trip.flight_id }}:</strong> {{ trip.class }} to {{ trip.destination }} on {{ trip.departure_date }} (Trips: {{ trip.trip_count }})
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section class="card" aria-labelledby="ai-recommendations-heading">
+      <h2 id="ai-recommendations-heading">AI-based Travel Recommendations</h2>
+      <ul>
+        {% for rec in ai_recommendations %}
+        <li>
+          Consider our <strong>{{ rec.class }}</strong> option for a journey to <strong>{{ rec.destination }}</strong> on {{ rec.departure_date }}.
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section class="card" aria-labelledby="random-accommodation-heading">
+      <h2 id="random-accommodation-heading">Random Accommodation Recommendation</h2>
+      <!-- Optionally include another random recommendation here -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 DubaiSpace Initiative. All rights reserved.</p>
+  </footer>
+</body>
+</html>

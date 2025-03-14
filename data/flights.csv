@@ -1,0 +1,4 @@
+flight_id,departure_date,trip_count,class,destination,price
+FL001,2025-04-20,3,Luxury Cabin,Space Station Alpha,15000
+FL002,2025-05-15,1,Economy Shuttle,Lunar Hotel Beta,5000
+FL003,2025-06-10,2,VIP Zero-Gravity,Space Station Gamma,25000

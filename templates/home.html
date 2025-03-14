@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DubaiSpace - Home</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>DubaiSpace</h1>
+    <nav aria-label="Main Navigation">
+      <a class="nav-link" href="/dashboard">Dashboard</a>
+    </nav>
+  </header>
+  <main>
+    <section class="card" aria-labelledby="accommodation-heading">
+      <h2 id="accommodation-heading">Today's Accommodation Recommendation</h2>
+      <div role="region" aria-live="polite">
+        <h3>{{ accommodation.name }} ({{ accommodation.type }})</h3>
+        <p><strong>Location:</strong> {{ accommodation.location }}</p>
+        <p>{{ accommodation.description }}</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 DubaiSpace Initiative. All rights reserved.</p>
+  </footer>
+</body>
+</html>
